@@ -2,7 +2,7 @@
 # coding: utf-8
 import sys, os, urllib, string
 
-s = urllib.urlopen('http://www.naver.com').read()
+s = urllib.urlopen('http://www.python.org/').read()
 
 
 n = 0
