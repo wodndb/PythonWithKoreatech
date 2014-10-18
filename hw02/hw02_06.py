@@ -2,7 +2,7 @@
 # coding: utf-8
 import sys, os, urllib, string
 
-s = urllib.urlopen('http://www.python.org/').read()
+s = urllib.urlopen('http://www.daum.net').read()
 
 
 n = 0
@@ -10,12 +10,12 @@ pivot = 0
 while(n < len(s)):
 	if(s.startswith('<style', n)):
 		pivot = n
-		while(s.startwith('</style>', pivot) == False):
+		while(s.startswith('</style>', pivot) == False):
 			pivot += 1
 		s = s[0:n] + ' ' + s[pivot+8:]
 	elif(s.startswith('<STYLE', n)):
 		pivot = n
-		while(s.startwith('</STYLE>', pivot) == False):
+		while(s.startswith('</STYLE>', pivot) == False):
 			pivot += 1
 		s = s[0:n] + ' ' + s[pivot+8:]
 	elif(s.startswith('<script', n)):
